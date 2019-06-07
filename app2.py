@@ -1,4 +1,6 @@
 # fifteenth tutorial: For Loops
+from typing import List
+
 for item in 'Python':
     print(item)
 
@@ -57,3 +59,65 @@ for item in list[1:]:
     if biggest_number < item:
         biggest_number = item
 print(biggest_number)
+
+# eighteenth tutorial: 2D Lists
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix[0][1] = 20
+print(matrix[0][1])
+for row in matrix:
+    for item in row:
+        print(item)
+
+# nineteenth tutorial: List Methods
+numbers = [5, 2, 1, 7, 4]
+numbers.append(20)
+print(numbers)
+numbers.insert(0, 10)
+print(numbers)
+numbers.remove(5)
+print(numbers)
+numbers.pop()
+print(numbers)
+print(numbers.index(4)) #can return an error if number is not in the list
+#numbers.clear()
+print(numbers)
+print(50 in numbers)
+print(numbers.count(5))
+numbers.sort()
+print(numbers)
+numbers.reverse()
+print(numbers)
+numbers2 = numbers.copy()
+numbers.append(10)
+print(numbers2)
+
+# Exercise: remove list duplicates
+
+list1 = [2, 5, 2, 3, 5, 3, 10, 9, 9]
+uniques = []
+for item in list1:
+    if item not in uniques:
+        uniques.append(item)
+list1 = uniques
+print(list1)
+
+# Twentieth tutorial: Tuples
+numbers = (1, 2, 3) # immutable
+print(numbers[0])
+# numbers[0] = 5 will trigger an error
+
+# Twenty-first tutorial: Unpacking
+coordinates = (1, 2, 3)
+x = coordinates[0]
+y = coordinates[1]
+z = coordinates[2]
+# vs
+x, y, z = coordinates
+
+cero1 = [1, 2, 3]
+r, t, e = cero1
