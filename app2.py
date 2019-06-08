@@ -188,3 +188,44 @@ print("Finish")
 
 # Twenty-fifth tutorial: Keyword Arguments
 greet_user(last_name="Smith", first_name="John")
+
+# Twenty-sixth tutorial: Return Statement
+
+
+def square(number):
+    return number * number
+
+
+result = square(3)
+print(result)
+
+# Exercise: Creating a Reusable Function
+
+
+def emoji_converter(message):
+    words = message.split(' ')
+    emojis = {
+        ":)": "happy",
+        ":(": "sad"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
+print(emoji_converter("Hello :)"))
+
+# Twenty-seventh tutorial: Exceptions
+try:
+    age = 0
+    income = 2000
+    risk = income/age
+    print(age)
+except ValueError:
+    print('Invalid value')
+except ZeroDivisionError:
+    print('Age cannot be 0')
+
+# Twenty-eighth tutorial: Comments
+print("Sky is blue")
