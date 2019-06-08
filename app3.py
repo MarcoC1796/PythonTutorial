@@ -121,3 +121,7 @@ print(path.glob('*.py'))  # *: everything, *.*: all the files, *.py all the pyth
                           #  Searches for files in the current directory
 for file in path.glob('*.py'):
     print(file)
+
+# Thirtieth-sixth tutorial: Pypi and pip
+#   Pypi is a directory where you can found a lots of packages
+#   Download Openpyxl to manage spreadsheets
