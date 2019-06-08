@@ -63,3 +63,61 @@ dog1.bark()
 import converters  # You can also use: from converters import kg_to_lbs. No need to prefix with module name.
 
 print(converters.kg_to_lbs(70))
+
+# Exercise: defining module
+import utils
+list = [2, 34, 25, 2, 56, 23, 6, 54, 3]
+print(utils.find_max(list))
+
+# Thirtieth-third tutorial: Packages
+#   Add a  _init_.py file in the directory. Or add directly a new package
+import ecommerce.shipping
+ecommerce.shipping.calc_shipping()
+
+from ecommerce.shipping import calc_shipping # Also: from ecommerce import shipping
+calc_shipping()
+
+# Thirtieth-forth tutorial: Generating Random Values
+#   Search Python 3 module index to see all python built-in modules
+import random
+
+for i in range(3):
+    print(random.random())
+
+for i in range(3):
+    print(random.randint(10, 20))
+
+members = ["John", "Mary", "Bob", "Josh"]
+leader = random.choice(members)
+print(leader)
+
+# Exercise: dice
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
+        return first, second  # Interpreted as a tuple
+
+
+dice = Dice()
+print(dice.roll())
+
+# Thirtieth-fifth tutorial: Files and Directories
+
+from pathlib import Path
+
+#   Absolute path: c:\Program Files\Microsoft
+#   Relative path: starting on a given directory
+
+path = Path("ecommerce")
+print(path.exists())
+
+path2 = Path("emails")
+path2.mkdir()
+path2.rmdir()
+
+path = Path()
+print(path.glob('*.py'))  # *: everything, *.*: all the files, *.py all the python files
+                          #  Searches for files in the current directory
+for file in path.glob('*.py'):
+    print(file)
