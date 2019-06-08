@@ -121,3 +121,70 @@ x, y, z = coordinates
 
 cero1 = [1, 2, 3]
 r, t, e = cero1
+
+# Twenty-second tutorial: Dictionaries
+customer = { # keys should be unique
+    "name": "John Smith",
+    "age": 30,
+    "is_verified": True
+}
+
+print(customer["name"])
+print(customer.get("birthdate", "Jan 1 1980"))
+customer["name"] = "Jack Smith"
+print(customer["name"])
+customer["birthdate"] = "Jan 1 1990"
+print(customer["birthdate"])
+
+# Exercise
+# phone = input("Phone: ")
+# digits_mapping ={
+#     "1": "One",
+#     "2": "Two",
+#     "3": "Three",
+#     "4": "Four",
+# }
+# output = ""
+# for ch in phone:
+#     digits_mapping.get(ch, "!")
+#     output += digits_mapping.get(ch, "!") + " "
+# print(output)
+
+# Project: Emoji Converter :)
+# message = input(">")
+# words = message.split(' ')
+# emojis = {
+#     ":)": "happy",
+#     ":(": "sad"
+# }
+# output = ""
+# for word in words:
+#     output += emojis.get(word, word) + " "
+# print(output)
+
+# Twenty-third tutorial: Functions
+
+
+def greet_user():
+    print('Hi there')
+    print('Welcome aboard')
+
+
+print("Start")
+greet_user()
+print("Finish")
+
+# Twenty-forth tutorial: Parameters
+
+
+def greet_user(first_name, last_name):
+    print(f'Hi {first_name} {last_name}!')
+    print('Welcome aboard')
+
+
+print("Start")
+greet_user("John", "Smith")
+print("Finish")
+
+# Twenty-fifth tutorial: Keyword Arguments
+greet_user(last_name="Smith", first_name="John")
